@@ -2,7 +2,7 @@
 import UserInfo from './components/UserInfo.vue'
 import Skills from './components/Skills.vue'
 import SoftwareExperience from './components/SoftwareExperience.vue'
-import Honors from './components/Honors.vue'
+import WorkExperience from './components/WorkExperience.vue'
 import Summary from './components/Summary.vue'
 </script>
 
@@ -10,8 +10,8 @@ import Summary from './components/Summary.vue'
   <div>
     <UserInfo />
     <Skills />
+    <WorkExperience />
     <SoftwareExperience />
-    <Honors />
     <Summary />
   </div>
 </template>

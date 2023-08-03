@@ -1,40 +1,127 @@
 <template>
   <section>
     <h2>项目经历</h2>
-    <div class="title">
-      <p><strong>Nuxt3 平台与 Content v2 库的个人博客｜开发与维护｜2022.12 - 至今</strong></p>
+    <div
+      v-for="(projectItem, projectIndex) in projectList"
+      class="px-2 pb-1"
+    >
+      <p class="flex justify-between">
+        <strong class="text-base">{{ projectItem.projectName }}</strong>
+        <strong>{{ projectItem.cycle }}</strong>
+      </p>
+      <p>
+        <strong>技术栈：</strong>
+        <span>{{ projectItem.technologyStack.join('、') }}</span>
+      </p>
+      <ul>
+        <li v-for="dutyItem in projectItem.duty">
+          {{ dutyItem }}
+        </li>
+      </ul>
     </div>
-    <ul>
-      <li>自主开发博客系统、负责整个系统的开发。</li>
-      <li>项目基于前端 SSR 框架 Nuxt：Nuxt3+PostCSS+Nuxt Content+Tailwind CSS+Nuxt Color Mode。</li>
-      <li>项目开发过程中，研读Nuxt3等新技术栈英文文档，为博客的功能需求和个性化提供技术支持；使用 Content V2 和 Tailwind CSS Typography 模块解决 markdown
-        文件的解析与渲染问题；通过接口获取所有md文件后，使用 RSS 模块生成 xml 文件，解决网站的RSS订阅功能；使用 Nuxt Color
-        Mode 模块为博客提供了夜间模式；通过 css animation 为页面添加下雪动画，增加网站趣味性和用户体验；经过SEO优化，项⽬各项性能经由Google Lighthouse
-        指标分析获得<strong>100满分</strong></li>
-    </ul>
-    <p><strong>基于 Three.js 的 3D 现代个人作品集｜开发与维护｜2022.09 - 2022.12</strong></p>
-    <ul>
-      <li>个人展示作品、负责整个项目的开发。</li>
-      <li>项目基于前端主流的 WebGL 框架 Three.js: Vite+H5+ES6+CSS3+Three.js+GSAP+ASScroll+Node event。</li>
-      <li>项目开发过程中，使用 Blender 建模所需展示的 low poly 模型；使用 Three.js 载入 3D 模型；根据 GSAP ScrollTrigger 监听鼠标滑动，更改模型的参数形成 3D
-        动画的交互；使用 ASScroll 来使得页面的滚动更加顺滑从而提高网站体验；采用单例模式开发，优化程序性能，解决模型加载的不合理和速度，从而提高用户体验；使用 CSS
-        变量为页面添加夜间模式开发从而提高用户浏览体验；使用
-        Node
-        event 库解决原生
-        JavaScript
-        单例模式的自定义事件触发问题；</li>
-    </ul>
-    <p><strong>基于 Vue.js 的软协协会管理系统｜项目组长与前端｜2022.06 - 2022-07</strong></p>
-    <ul>
-      <li>小学期小组项目、小组组长，协调项目开发目标与排期</li>
-      <li>项目基于前端框架 Vue.js：Vite+Vue.js+Vue-Route+Pinia+Axios+ElementUI+SCSS 全家桶。</li>
-      <li>
-        项目开发过程中，与组员一起讨论项目的需求，确定项目的开发方向，制定项目开发计划；
-        制定项目计划、跟踪进度、确保项目按时完成，管理好项目进度，及时发现问题并解决；
-        使用 Git 管理项目从而提高团队开发效率；
-        使用 Eslint 来明确统一的标准，解决维护成本高的问题；
-        使用 JWT 方案完成用户认证，解决用户登陆状态管理的问题；
-        为前端成员写的代码进行组件化封装、优化，提高整个项目代码的质量；</li>
-    </ul>
   </section>
 </template>
+
+<script>
+import {
+  defineComponent,
+  getCurrentInstance,
+reactive
+} from 'vue'
+export default defineComponent({
+  name: 'SoftwareExperience'
+})
+</script>
+
+<script setup>
+const proxy = getCurrentInstance()?.proxy
+
+const projectList = reactive([
+  {
+    projectName: '智能合并报表及附注审核工具',
+    cycle: '202303-202308',
+    technologyStack: [
+      'Vue3',
+      'Vite4',
+      'D3',
+      'Typescript',
+      'Pinia',
+      'VueUse',
+    ],
+    projectBackground: '针对合并报表及附注的自动化处理校验，大幅降低项目组工时投入，提高数据质量，以效率工具为基础，将其产品化，功能覆盖合并报表及附注处理重要环节，并实现项目组协同工作',
+    duty: [
+      '基于D3绘制阶段流程图',
+      '开发产品指引组件',
+      '基于keep-alive的页内tab组件',
+      '披露表相关模块开发',
+      '产品对接，项目排期，模块划分，路由设计，code-review',
+    ]
+  },
+  {
+    projectName: 'SW-GPT服务 ',
+    cycle: '202305-202306',
+    technologyStack: [
+      'Vue3',
+      'pingpp',
+      'ChatGPT',
+    ],
+    projectBackground: '私有化-付费chatgpt，根据ChatGPT-API实现定制化内网ChatGPT服务',
+    duty: [
+      '付费功能开发',
+      '技术落地实现',
+      '登录功能实现',
+    ]
+  },
+  {
+    projectName: '银行贷款分析系统',
+    cycle: '202302-20203',
+    technologyStack: [
+      'Vue3',
+      'Element-plus',
+      'Socket-io',
+      'Nest.js',
+    ],
+    projectBackground: '对银行不同年度的各个属性进行数据上传和数据分析，使用metabase进行数据分析，',
+    duty: [
+      '大文件切片上传',
+      'socketio对接，实时更新上传进度和分析进度',
+      'nest中间件开发，api开发',
+      '对接metabase接口数据，数据处理',
+    ]
+  },
+  {
+    projectName: 'h-gz-f',
+    cycle: '202208-202212',
+    technologyStack: [
+      'React',
+      'em',
+      'Metabase',
+      'Echatrs',
+    ],
+    projectBackground: '说点啥',
+    duty: [
+      '大屏适配em选型，落地实现，业务开发',
+      '模块划分，任务分配',
+      '修改meatbase组件',
+    ]
+  },
+  {
+    projectName: '流程挖掘系统',
+    cycle: '202012-202102',
+    technologyStack: [
+      'Vue2',
+      'Element',
+      'Echarts',
+      'D3',
+      'Vue-cli',
+    ],
+    projectBackground: '是一套基于指定数据，分析数据的产品，根据用户上传的数据，分析数据展示数据流程和各个流程信息，并且可以指定不同数据的展示方式(各种图表展示)',
+    duty: [
+      '项目搭建，路由设计，业务对接',
+      '文件上传和数据设置模块，数据设置：指定列的数据类型 和 表格数据修改 设置数据流程',
+      '可拖拽自适应画布，基于 vue-grid-layout 二次开发实现自定义拖拽画布',
+      '图表配置展示，通过选择图表类型，配置图表属性和数据，数据筛选和排序',
+    ]
+  },
+])
+</script>
