@@ -78,7 +78,7 @@ const projectList = reactive([
   },
   {
     projectName: '银行贷款分析系统',
-    cycle: '202302-20203',
+    cycle: '202302-202303',
     technologyStack: [
       'Vue3',
       'Element-plus',
