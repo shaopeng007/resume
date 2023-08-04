@@ -25,9 +25,9 @@ import avatar from '/avatar.pic.jpg'
             <a href="https://ggupzhh.github.io/blog" target="_blank">https://ggupzhh.github.io/blog</a>
           </li>
           <li>期望职位：web前端开发工程师 / 技术经理</li>
-          <li>手机：15849493152</li>
-          <li>微信：GGupzHH</li>
-          <li>邮箱：ggupzhh@gmail.com</li>
+          <li>手机：158xxxxxxxx</li>
+          <li>微信：xxxxx</li>
+          <li>邮箱：xxxx@gmail.com</li>
         </ul>
       </div>
     </div>
