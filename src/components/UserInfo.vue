@@ -17,7 +17,7 @@ import avatar from '/avatar.pic.jpg'
 
         rounded-full " :src="avatar" alt="avatar" />
       </div>
-      <h3 class="text-center sm:text-left ">GGupzHH</h3>
+      <h3 class="text-center sm:text-left ">赵雅国</h3>
       <ul>
         <li>1996 / 男</li>
         <li>本科 / 内蒙古科技大学 / 软件工程（2015-2019）</li>
@@ -25,9 +25,9 @@ import avatar from '/avatar.pic.jpg'
           <a href="https://ggupzhh.github.io/blog" target="_blank">https://ggupzhh.github.io/blog</a>
         </li>
         <li>期望职位：web前端开发工程师 / 技术经理</li>
-        <li>手机：158xxxxxxxx</li>
-        <li>微信：xxxxxxx</li>
-        <li>邮箱：xxxxxxxx@gmail.com</li>
+        <li>手机：15849493152</li>
+        <li>微信：GGupzHH</li>
+        <li>邮箱：ggupzhh@gmail.com</li>
       </ul>
     </div>
 
