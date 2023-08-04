@@ -9,11 +9,15 @@
         <strong class="text-base">{{ projectItem.projectName }}</strong>
         <strong>{{ projectItem.cycle }}</strong>
       </p>
-      <p>
+      <div>
+        <strong>项目描述：</strong>
+        <span>{{ projectItem.projectBackground }}</span>
+      </div>
+      <div>
         <strong>技术栈：</strong>
         <span>{{ projectItem.technologyStack.join('、') }}</span>
-      </p>
-      <ul>
+      </div>
+      <ul class="mx-3">
         <li v-for="dutyItem in projectItem.duty">
           {{ dutyItem }}
         </li>
@@ -48,13 +52,13 @@ const projectList = reactive([
       'Pinia',
       'VueUse',
     ],
-    projectBackground: '针对合并报表及附注的自动化处理校验，大幅降低项目组工时投入，提高数据质量，以效率工具为基础，将其产品化，功能覆盖合并报表及附注处理重要环节，并实现项目组协同工作',
+    projectBackground: '针对合并报表及附注的自动化处理校验，大幅降低项目组工时投入，提高数据质量，以效率工具为基础，将其产品化，功能覆盖合并报表及附注处理重要环节，并实现项目组协同工作；',
     duty: [
-      '基于D3绘制阶段流程图',
-      '开发产品指引组件',
-      '基于keep-alive的页内tab组件',
-      '披露表相关模块开发',
-      '产品对接，项目排期，模块划分，路由设计，code-review',
+      '基于D3绘制阶段流程图；',
+      '负责开发用户指引组件；',
+      '基于keep-alive的页内tab组件；',
+      '披露表相关功能模块开发；',
+      '负责产品对接，项目排期，模块划分，路由设计，code-review；',
     ]
   },
   {
@@ -65,11 +69,11 @@ const projectList = reactive([
       'pingpp',
       'ChatGPT',
     ],
-    projectBackground: '私有化-付费chatgpt，根据ChatGPT-API实现定制化内网ChatGPT服务',
+    projectBackground: '基于ChatGPT-API实现定制化内网ChatGPT服务；',
     duty: [
-      '付费功能开发',
-      '技术落地实现',
-      '登录功能实现',
+      '调研chatgpt-web-share项目，本地部署二次开发',
+      '对接内网登录，实现用户管理；',
+      '基于pingpp开发付费功能',
     ]
   },
   {
@@ -81,12 +85,12 @@ const projectList = reactive([
       'Socket-io',
       'Nest.js',
     ],
-    projectBackground: '对银行不同年度的各个属性进行数据上传和数据分析，使用metabase进行数据分析，',
+    projectBackground: '对不同银行的不同年度下的各个模板进行数据上传和数据分析，展示数据分析结果和报告；',
     duty: [
-      '大文件切片上传',
-      'socketio对接，实时更新上传进度和分析进度',
-      'nest中间件开发，api开发',
-      '对接metabase接口数据，数据处理',
+      '基于slice进行大文件切片上传；',
+      '基于Socket-io实现长链接，实时更新上传进度和分析进度；',
+      '基于Nest.js框架开发中间件，对接第三方数据分析系统，整理汇总数据并给前端提供API；',
+      '负责整个项目业务对接，路由设计，模块划分等工作；',
     ]
   },
   {
@@ -95,14 +99,13 @@ const projectList = reactive([
     technologyStack: [
       'React',
       'em',
-      'Metabase',
       'Echatrs',
     ],
-    projectBackground: '说点啥',
+    projectBackground: '根据已有数据进行展示数据分析结果，依赖第三方数据分析产品，二次开发展示；',
     duty: [
-      '大屏适配em选型，落地实现，业务开发',
-      '模块划分，任务分配',
-      '修改meatbase组件',
+      '大屏适配em选型，并落地实现；',
+      '二次开发相关业务组件，重构侧边栏组件；',
+      '负责业务对接、模块划分、任务分配、进度把控等工作；',
     ]
   },
   {
@@ -115,12 +118,12 @@ const projectList = reactive([
       'D3',
       'Vue-cli',
     ],
-    projectBackground: '是一套基于指定数据，分析数据的产品，根据用户上传的数据，分析数据展示数据流程和各个流程信息，并且可以指定不同数据的展示方式(各种图表展示)',
+    projectBackground: '流程挖掘系统是一套基于指定数据，分析数据的产品，根据用户上传的数据，分析数据展示数据流程和各个流程信息，并且可以指定不同数据的展示方式(各种图表展示)；',
     duty: [
-      '项目搭建，路由设计，业务对接',
-      '文件上传和数据设置模块，数据设置：指定列的数据类型 和 表格数据修改 设置数据流程',
-      '可拖拽自适应画布，基于 vue-grid-layout 二次开发实现自定义拖拽画布',
-      '图表配置展示，通过选择图表类型，配置图表属性和数据，数据筛选和排序',
+      '负责业务对接、项目搭建、路由设计；',
+      '负责开发文件拖拽上传和数据列设置模块；',
+      '负责开发可拖拽自适应画布，基于vue-grid-layout二次封装实现自定义拖拽画布；',
+      '配合产品、后端同事设计图表配置交互方案，开发图表配置功能，通过选择图表类型，配置图表属性和数据，进行数据展示；',
     ]
   },
 ])
