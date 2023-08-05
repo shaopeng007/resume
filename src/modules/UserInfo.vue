@@ -1,7 +1,3 @@
-<script setup>
-// import avatar from '/avatar.pic.jpg'
-</script>
-
 <template>
   <section>
     <!-- class="sm:flex justify-between flex-row-reverse" -->
@@ -18,20 +14,51 @@
       rounded-full " :src="avatar" alt="avatar" /> -->
       <div>
         <h3 class="sm:text-left ">赵雅国</h3>
-        <!-- <IconFont icon="icon-blog"> -->
         <ul>
-          <li>1996 / 男</li>
-          <li>本科 / 内蒙古科技大学 / 软件工程（2015-2019）</li>
-          <li>技术博客：
-            <a href="https://ggupzhh.github.io/blog" target="_blank">https://ggupzhh.github.io/blog</a>
+          <li v-for="userInfoItem in userInfo" class="flex items-center mb-1">
+            <IconFont :icon="userInfoItem.icon" class="text-lg "/>
+            <span class="block ml-2">{{ userInfoItem.text }}</span>
           </li>
-          <li>期望职位：web前端开发工程师 / 技术经理</li>
-          <li>手机：158xxxxxxxx</li>
-          <li>微信：xxxxx</li>
-          <li>邮箱：xxxx@gmail.com</li>
         </ul>
       </div>
     </div>
 
   </section>
 </template>
+
+<script setup>
+import { reactive } from 'vue';
+
+ 
+// import avatar from '/avatar.pic.jpg'
+const userInfo = reactive([
+  {
+    icon: 'icon-shengri--',
+    text: '1996 / 男'
+  },
+  {
+    icon: 'icon--xuexiao',
+    text: '本科统招 / 内蒙古科技大学 / 软件工程（2015-2019）'
+  },
+  {
+    icon: 'icon-blog1',
+    text: '技术博客：https://ggupzhh.github.io/blog'
+  },
+  {
+    icon: 'icon-WEBqianduan',
+    text: '期望职位：web前端开发工程师 / 技术经理'
+  },
+  {
+    icon: 'icon-shouji3',
+    text: '手机：158xxxxxxxx'
+  },
+  {
+    icon: 'icon-weixin1',
+    text: '微信：xxxxx'
+  },
+  {
+    icon: 'icon-youxiang1',
+    text: '邮箱：xxxx@gmail.com'
+  },
+])
+</script>
