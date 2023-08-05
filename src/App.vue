@@ -1,9 +1,13 @@
 <script setup>
-import UserInfo from './components/UserInfo.vue'
-import Skills from './components/Skills.vue'
-import SoftwareExperience from './components/SoftwareExperience.vue'
-import WorkExperience from './components/WorkExperience.vue'
-import Summary from './components/Summary.vue'
+import UserInfo from './modules/UserInfo.vue'
+import Skills from './modules/Skills.vue'
+import SoftwareExperience from './modules/SoftwareExperience.vue'
+import WorkExperience from './modules/WorkExperience.vue'
+import Summary from './modules/Summary.vue'
+import { getCurrentInstance } from 'vue'
+
+const proxy = getCurrentInstance()
+console.log(proxy)
 </script>
 
 <template>

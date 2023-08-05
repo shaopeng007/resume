@@ -18,6 +18,7 @@
       rounded-full " :src="avatar" alt="avatar" /> -->
       <div>
         <h3 class="sm:text-left ">赵雅国</h3>
+        <!-- <IconFont icon="icon-blog"> -->
         <ul>
           <li>1996 / 男</li>
           <li>本科 / 内蒙古科技大学 / 软件工程（2015-2019）</li>
