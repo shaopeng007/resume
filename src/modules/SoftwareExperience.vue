@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>项目经历</h2>
+    <Title title="项目经历" icon="icon-Blog"/>
     <div
       v-for="(projectItem, projectIndex) in projectList"
       class="px-2 pb-1"

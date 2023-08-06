@@ -1,6 +1,6 @@
 <template>
   <section>
-    <h2>工作经历</h2>
+    <Title title="工作经历" icon="icon-shishizhongxin"/>
     <div
       v-for="(companyItem, companyIndex) in companyList"
       class="pb-1"
@@ -49,7 +49,7 @@ const companyList = reactive([
     branch: '大数据技术部',
     title: '项目经理',
     routineWork: [
-      '负责制定前端规范，封装公共组件，项目日常开发，code-review',
+      '负责制定前端规范，封装公共组件，项目日常开发，code-review；',
       '负责需求对接、模块划分、开发排期、进度掌控、输出架构方案、推动项目进程等项目管理工作；',
       '调研新技术，与时俱进，并落地实现；',
       '开发脚手架，构建VSCode插件，维护脚手架模板，提高开发效率；',

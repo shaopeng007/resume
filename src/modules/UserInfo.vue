@@ -45,6 +45,10 @@ const userInfo = reactive([
     text: '技术博客：https://ggupzhh.github.io/blog'
   },
   {
+    icon: 'icon-browser',
+    text: '在线简历：https://ggupzhh.github.io/resume/'
+  },
+  {
     icon: 'icon-WEBqianduan',
     text: '期望职位：web前端开发工程师 / 技术经理'
   },
@@ -57,7 +61,7 @@ const userInfo = reactive([
     text: '微信：xxxxx'
   },
   {
-    icon: 'icon-youxiang1',
+    icon: 'icon-youxiang',
     text: '邮箱：xxxx@gmail.com'
   },
 ])

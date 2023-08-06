@@ -1,28 +1,12 @@
 <template>
   <section>
-    <h2>专业技能</h2>
     <div>
-      <div class="text-xl font-bold	">专业技能</div>
-      <div class="relative" style="
-        border-bottom: 1px solid transparent;
-        background-clip: padding-box, border-box;
-        background-origin: padding-box, border-box;
-        border-image: linear-gradient(to right, rgb(71, 215, 255), #3b82f6) 4;
-      ">
-        <div 
-          class="w-0 h-0 absolute top-px right-0" 
-          style="
-            border-top: 4px solid #3b82f6;
-            border-right: 4px solid transparent;
-            border-left: 4px solid transparent;"
-        >
-        </div>
-      </div>
+      <Title title="专业技能" icon="icon-wangzhanweihuwangzhanshezhi"/>
     </div>
     <ul>
       <li> 熟练使用H5+C3快速构建页面，熟练使用less、sass等预处理器，有良好的编码习惯;</li>
       <li> 熟练使用Vue2/3全家桶+JavaScript、TypeScript开发，并熟悉主流MVVM框架;</li>
-      <li> 熟练使用elementui、Naiveui、iView、Ant-Design等主流UI组件库;</li>
+      <li> 熟练使用Elementui、Naiveui、iView、Ant-Design等主流UI组件库;</li>
       <li> 熟练使用Echarts、antv、hightcharts、D3等进行可视化数据展示，大屏开发;</li>
       <li> 熟练使用Nuxt进行服务端渲染开发;   </li>
       <li> 熟悉使用vuepress，vitepress进行文档搭建;</li>
