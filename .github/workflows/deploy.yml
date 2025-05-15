@@ -14,14 +14,16 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
 
-      - name: Setup Node
+      - name: Setup Node and Cache Dependencies
         uses: actions/setup-node@v3
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
 
-      - name: Install dependencies
-        uses: bahmutov/npm-install@v1
-
-      - name: Build project
-        run: npm run build --base=./
+      - name: Install dependencies and Build project
+        run: |
+          npm install
+          npm run build --base=./
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
@@ -33,7 +35,6 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Download artifact
