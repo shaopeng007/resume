@@ -13,7 +13,7 @@
 
       rounded-full " :src="avatar" alt="avatar" /> -->
       <div>
-        <h3 class="sm:text-left ">赵雅国</h3>
+        <h3 class="sm:text-left ">韩少鹏</h3>
         <ul>
           <li v-for="userInfoItem in userInfo" class="flex items-center mb-1">
             <IconFont :icon="userInfoItem.icon" class="text-lg "/>
@@ -34,15 +34,11 @@ import { reactive } from 'vue';
 const userInfo = reactive([
   {
     icon: 'icon-shengri--',
-    text: '1996 / 男'
+    text: '1993 / 男'
   },
   {
     icon: 'icon--xuexiao',
-    text: '本科统招 / 内蒙古科技大学 / 软件工程（2015-2019）'
-  },
-  {
-    icon: 'icon-blog1',
-    text: '技术博客：https://ggupzhh.github.io/blog'
+    text: '本科统招 / 内蒙古大学 / 化学工程（2012-2016）'
   },
   {
     icon: 'icon-browser',
@@ -50,7 +46,7 @@ const userInfo = reactive([
   },
   {
     icon: 'icon-WEBqianduan',
-    text: '期望职位：web前端开发工程师 / 技术经理'
+    text: '期望职位：Java后端开发工程师 / 技术经理'
   },
   {
     icon: 'icon-shouji3',
